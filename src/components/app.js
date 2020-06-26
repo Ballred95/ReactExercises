@@ -4,6 +4,7 @@ import Toggle from './toggle';
 import Updown from './updown';
 import BigSmall from './bigsmall';
 import Colorbutton from './colorbutton'
+import Clock from './clock'
 
 export default class App extends Component {
   render() {
@@ -19,6 +20,8 @@ export default class App extends Component {
         <BigSmall />
         <hr />
         <Colorbutton />
+        <hr />
+        <Clock />
       </div>
     );
   }
