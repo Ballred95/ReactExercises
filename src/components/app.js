@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Align from './align';
 import Toggle from './toggle';
 import Updown from './updown';
+import BigSmall from './bigsmall';
+import Colorbutton from './colorbutton'
 
 export default class App extends Component {
   render() {
@@ -14,6 +16,9 @@ export default class App extends Component {
         <hr/>
         <Updown />
         <hr/>
+        <BigSmall />
+        <hr />
+        <Colorbutton />
       </div>
     );
   }
