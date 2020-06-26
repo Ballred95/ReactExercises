@@ -5,10 +5,10 @@ export default class  extends Component {
         super(props)
 
         this.state = {
-            color: 'blue',
-            inputValue: '',
-            colorInputValue: '',
-            finalValue: ''
+            color: 'purple',
+            inputValue: 'Color Me!',
+            colorInputValue: 'purple',
+            finalValue: 'Color ME!'
 
         }
 
