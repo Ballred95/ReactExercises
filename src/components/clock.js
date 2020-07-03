@@ -1,29 +1,54 @@
-import React, {Component} from 'react' 
+// import React, {Component} from 'react' 
 
-export default class Clock extends Component {
-    constructor(props) {
-        super(props)
+// export default class Clock extends Component {
+//     constructor(props) {
+//         super(props)
 
-        this.state = {
-            time: new Date()
-        }
+//         this.state = {
+//             time: new Date()
+//         }
+//     }
+
+//     currenTime() {
+//         this.setState({
+//             time: new Date()
+//         })
+//     }
+
+//     componentDidMount() {
+//         setInterval(() => this.currenTime(), 1000)
+//     }
+
+// render() {
+//         return (
+//             <div className = ''>
+//                 {this.state.time.toLocaleTimeString()}
+//             </div>
+//         )
+//     }
+// }
+
+
+
+
+
+import React, { useState, useEffect } from 'react' 
+
+export default function Clock (props) {
+
+    const [time, setTime] = useState(new Date())
+
+    const currenTime = () => {
+        setTime(new Date())
     }
 
-    currenTime() {
-        this.setState({
-            time: new Date()
-        })
-    }
+    useEffect( () => {
+        setInterval(() => currenTime(), 1000)
+    })
 
-    componentDidMount() {
-        setInterval(() => this.currenTime(), 1000)
-    }
-
-render() {
-        return (
-            <div className = ''>
-                {this.state.time.toLocaleTimeString()}
-            </div>
-        )
-    }
+    return (
+        <div className = ''>
+        {time.toLocaleTimeString()}
+    </div>
+    )
 }
